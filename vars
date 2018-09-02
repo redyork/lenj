@@ -9,4 +9,4 @@ lenj_email='yorkred@gmail.com'
 lenj_domain='dev.t00.space'
 
 #additional domain with -d prefix (for certbot command line)
-lenj_adddomains='-d www.dev.t00.space'
+lenj_adddomains='www.dev.t00.space'

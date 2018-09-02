@@ -11,7 +11,7 @@ mkdir -p  $lenj_dockerdir/data/nginx
 
 mkdir -p $lenj_dockerdir/data/nginx
 
-openssl dhparam -out $lenj_dockerdir/nginx/dhparam-2048.pem 2048
+#openssl dhparam -out $lenj_dockerdir/data/nginx/dhparam-2048.pem 2048
 
 cp docker-compose.yml $lenj_dockerdir/
 cp nginx.conf $lenj_dockerdir/data/nginx/
