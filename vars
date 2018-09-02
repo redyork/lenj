@@ -1,0 +1,4 @@
+#Project LENJ vars
+lenj_destdir='/docker/letsencrypt-docker-nginx/src/letsencrypt/'
+lenj_domain='t00.space'
+lenj_email='yorkred@gmail.com'
