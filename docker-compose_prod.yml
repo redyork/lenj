@@ -1,0 +1,22 @@
+version: '3.1'
+
+services:
+
+  production-nginx-container:
+    container_name: 'production-nginx-container'
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./data/nginx/nginx_prod.conf:/etc/nginx/conf.d/default.conf
+      - ./www:/usr/share/nginx/html
+      - ./data/nginx/dhparam-2048.pem:/etc/ssl/certs/dhparam-2048.pem
+      - ./etc/letsencrypt/live/changemyname/fullchain.pem:/etc/letsencrypt/ssl/fullchain.pem
+      - ./etc/letsencrypt/live/changemyname/privkey.pem:/etc/letsencrypt/ssl/privkey.pem
+    networks:
+      - docker-network
+
+networks:
+  docker-network:
+    driver: bridge

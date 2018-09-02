@@ -1,4 +1,12 @@
 #Project LENJ vars
-lenj_destdir='/docker/letsencrypt-docker-nginx/src/letsencrypt/'
-lenj_domain='t00.space'
+#main working dir
+lenj_dockerdir='/docker/letsencrypt-docker-nginx/'
+
+#email for letsencrypt
 lenj_email='yorkred@gmail.com'
+
+#main domain
+lenj_domain='dev.t00.space'
+
+#additional domain with -d prefix (for certbot command line)
+lenj_adddomains='-d www.dev.t00.space'

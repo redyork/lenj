@@ -8,8 +8,8 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf
-      - ./letsencrypt-site:/usr/share/nginx/html
+      - ./data/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./www:/usr/share/nginx/html
     networks:
       - docker-network
 
