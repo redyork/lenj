@@ -4,7 +4,7 @@ services:
 
   jenkins:
     container_name: 'jenkins'
-    image: yorkred/jenkins
+    image: yorkred/ngjenkins
     ports:
       - "80:80"
     volumes:

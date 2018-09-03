@@ -5,7 +5,7 @@ source vars
 backway=`pwd`
 
 docker pull certbot/certbot
-docker pull yorkred/jenkins
+docker pull yorkred/ngjenkins
 
 mkdir -p $lenj_dockerdir/www
 mkdir -p $lenj_dockerdir/jenkins
