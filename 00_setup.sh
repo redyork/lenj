@@ -34,10 +34,8 @@ mkdir -p data/jenkins
 # Since Jenkins running under 'jenkins' user with uuid 1000 (by default) you need to set correct rights on working folder
 chmod 777 data/jenkins
 
-
-#sed -e "s/changemyname/$lenj_domain $lenj_adddomains/" nginx.conf > $lenj_dockerdir/data/nginx/nginx.conf
-
 docker-compose build
 docker-compose up -d
 
-cd $backway
+docker-compose exec jenkinsci /root/install_certs.sh
+docker-compose exec jenkinsci /root/certs_update.sh
